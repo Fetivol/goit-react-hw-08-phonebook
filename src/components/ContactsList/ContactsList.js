@@ -5,8 +5,11 @@ import {
 } from 'components/ContactsList/ContactsList.styled';
 import { Loader } from 'components/Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/operations';
-import { selectIsLoading, selectVisibleContacts } from 'redux/selectors';
+import { deleteContact } from 'redux/contacts/operations';
+import {
+  selectIsLoading,
+  selectVisibleContacts,
+} from 'redux/contacts/selectors';
 
 export const ContactsList = () => {
   const isLoading = useSelector(selectIsLoading);

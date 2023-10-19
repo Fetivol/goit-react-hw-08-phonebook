@@ -8,8 +8,8 @@ import {
   StyledErrorMessage,
 } from './Phonebook.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContacts } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 const InputSchema = Yup.object().shape({
   name: Yup.string()

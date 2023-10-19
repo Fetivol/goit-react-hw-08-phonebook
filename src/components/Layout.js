@@ -1,10 +1,15 @@
-import styled from 'styled-components';
+import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import { AppBar } from './AppBar/AppBar';
 
-export const Layout = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin: 0 auto;
-  padding: 10px;
-  align-items: center;
-`;
+const Layout = () => {
+  return (
+    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+      <AppBar />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
+    </div>
+  );
+};
+export default Layout;

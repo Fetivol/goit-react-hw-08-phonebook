@@ -1,30 +1,19 @@
-import { Phonebook } from './Phonebook/Phonebook';
-import { ContactsList } from './ContactsList/ContactsList';
-import { Filter } from './Filter/Filter';
-import { GlobalStyle } from './GlobalStyle';
-import { Layout } from './Layout';
-import { selectError } from 'redux/selectors';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import Layout from './Layout';
+import Home from 'pages/Home';
+import Contacts from 'pages/Contacts';
+import Register from 'pages/Register';
+import Login from 'pages/Login';
 
 export const App = () => {
-  const error = useSelector(selectError);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return (
-    <Layout>
-      {error && <p>{error}</p>}
-      <h1>Phonebook</h1>
-      <Phonebook></Phonebook>
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactsList />
-      <GlobalStyle />
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="contacts" element={<Contacts />} />
+      </Route>
+    </Routes>
   );
 };
