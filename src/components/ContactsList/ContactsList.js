@@ -21,10 +21,10 @@ export const ContactsList = () => {
       {isLoading && <Loader />}
       {visibleItems.length > 0 ? (
         <List>
-          {visibleItems.map(({ id, name, phone }) => {
+          {visibleItems.map(({ id, name, number }) => {
             return (
               <ListElem key={id}>
-                {name}: {phone}
+                {name}: {number}
                 <Button
                   type="button"
                   onClick={() => {
