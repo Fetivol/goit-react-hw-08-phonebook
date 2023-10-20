@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Label, Input } from './Filter.styled';
-// import { filterAction } from 'redux/actions';
 import { selectFilter } from 'redux/contacts/selectors';
 import { filterAction } from 'redux/contacts/filterSlice';
 
@@ -12,6 +11,7 @@ export const Filter = () => {
       Find contacts by name
       <Input
         type="text"
+        placeholder="Enter Contact"
         value={filter}
         onChange={e => {
           dispatch(filterAction(e.target.value));

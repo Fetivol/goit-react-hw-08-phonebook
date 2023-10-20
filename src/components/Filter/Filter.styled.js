@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Label = styled.label`
-  width: 300px;
+  width: 350px;
   border: 1px solid black;
   border-radius: 4px;
   display: flex;
@@ -16,4 +16,5 @@ export const Label = styled.label`
 export const Input = styled.input`
   background-color: #e8edfc;
   border-radius: 10px;
+  padding-left: 5px;
 `;

@@ -1,6 +1,10 @@
 import { styled } from 'styled-components';
 
 export const LoaderWrapper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
 `;

@@ -59,8 +59,8 @@ export const Phonebook = () => {
           <StyledErrorMessage component="div" name="name" />
         </Label>
         <Label>
-          Name
-          <StyledField name="number" type="tel" placeholder="phone" />
+          Number
+          <StyledField name="number" type="tel" placeholder="number" />
           <StyledErrorMessage component="div" name="phone" />
         </Label>
         <Button type="submit">Submit</Button>

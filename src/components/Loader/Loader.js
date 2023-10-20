@@ -5,6 +5,7 @@ export const Loader = () => {
   return (
     <LoaderWrapper>
       <MagnifyingGlass
+        // position= 'absolute',
         visible={true}
         height="80"
         width="80"
